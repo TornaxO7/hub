@@ -6,9 +6,9 @@ whitelist:
     - "any(File('cloudflare_ips.txt'), { IpInRange(evt.Overflow.Alert.Source.IP ,#)})"
     - "any(File('cloudflare_ip6s.txt'), { IpInRange(evt.Overflow.Alert.Source.IP ,#)})"
 data:
-  - source_url: https://www.cloudflare.com/ips-v4
+  - source_url: http://127.0.0.1/cloudflare/ips-v4
     dest_file: cloudflare_ips.txt
     type: string
-  - source_url: https://www.cloudflare.com/ips-v6
+  - source_url: http://127.0.0.1/cloudflare/ips-v6
     dest_file: cloudflare_ip6s.txt
     type: string

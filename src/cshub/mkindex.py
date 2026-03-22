@@ -263,3 +263,5 @@ def main():
     with args.output.open("w") as f:
         print(f"Writing to {args.output}")
         print(new_content, file=f)
+
+main()
